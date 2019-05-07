@@ -1,0 +1,551 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn {
+    padding: 10px 36px;
+    background: transparent;
+    color: #232B2B;
+    border: 3px solid #232B2B;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s ease-in-out;
+}
+
+.btn:hover {
+    background: #E3AE57;
+    color: #fff;
+    border: 3px solid #E3AE57;
+}
+
+#burger {
+    color: #333;
+    display: none;
+}
+
+nav {
+    width: 100%;
+    padding: 8px 0;
+    position: absolute;
+    top: 0;
+}
+
+nav .logo h3 {
+    color: #333;
+    text-shadow: 1px 1px #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+nav .container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .list .active, nav .list a:hover {
+    color: #E3AE57;
+}
+
+nav .list a {
+    margin: 0 10px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .4s ease-in-out;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background: #f1e2d7;
+    display: flex;
+}
+
+.main .main-left, .main .main-right {
+    width: 100%;
+    max-width: 50%;
+    min-height: 100vh;
+}
+
+.main .main-left {
+    background: url('img/home-img.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.main .main-right {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main .main-right h5 {
+    margin: 0;
+    color: #999;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.main .main-right h1 {
+    margin: 16px 0;
+    color: #333;
+    font-size: 36px;
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+.main .main-right span {
+    color: #232B2B;
+    font-weight: 400;
+}
+
+.main .main-right p {
+    margin: 0;
+    color: #999;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2;
+}
+
+.main .main-right .btn {
+    margin: 50px 0 0 0;
+}
+
+.about {
+    background: #ffffff;
+    display: flex;
+}
+
+.about .about-left, .about .about-right {
+    width: 100%;
+    max-width: 50%;
+    min-height: 300px;
+}
+
+.about .about-left, .about .about-card:nth-child(2), .experience .experience-info, .contact .contact-form, .contact .contact-card:nth-child(2) {
+    padding: 40px;
+}
+
+.about .about-left h2, .about .about-card h2, .experience .experience-info h2, .contact .contact-form h2 {
+    margin: 0;
+    color: #232B2B;
+    font-size: 36px;
+    font-weight: 200;
+}
+
+.about .about-left h5, .about .about-card h5, .experience .experience-info h5, .contact .contact-form h5 {
+    margin: 10px 0 30px 0;
+    color: #E3AE57;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.about .about-left p {
+    margin: 10px 0;
+    color: #999;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.about .about-right, .desc, .experience, .contact, .contact .contact-info, .icons {
+    display: flex;
+}
+
+.about .progress {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.about .progress .progress-bar {
+    width: 90%;
+    height: 100%;
+    background: #232B2B;
+}
+
+.about .progress .progress-bar.two {
+    width: 70%;
+}
+
+.about .progress .progress-bar.three {
+    width: 80%;
+}
+
+.about .progress-info {
+    width: 100%;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .progress-info p {
+    margin: 0;
+    color: #232B2B;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about .about-card:nth-child(1) {
+    background: url('img/about-img.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.about .about-card:nth-child(2), .experience .experience-info:nth-child(3) {
+    background: #E3AE57;
+}
+
+.about .about-card, .experience .experience-pic, .experience .experience-info, .contact .contact-form, .contact .contact-info, .contact .contact-card {
+    width: 100%;
+    max-width: 50%;
+}
+
+.about .about-card h2, .about .about-card h5, .experience .experience-info h2, .experience .experience-info h5, .about .progress-info p:nth-child(2), .experience .experience-card i, .testimonial i, .contact .contact-form h2, .contact .contact-form h5 {
+    color: #fff;
+}
+
+.desc .desc-box {
+    width: 100%;
+    max-width: 25%;
+    padding: 40px;
+    background: #E3AE57;
+    color: #fff;
+    text-align: center;
+}
+
+.desc .desc-box h4 {
+    margin: 40px 0 16px 0;
+    font-size: 22px;
+    font-weight: 200;
+}
+
+.desc .desc-box p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.desc .desc-box:nth-child(2), .experience .experience-info {
+    background: #e9724c;
+}
+
+.desc .desc-box:nth-child(3) {
+    background: #161616;
+}
+
+.desc .desc-box:nth-child(4) {
+    background: #fff;
+    color: #161616;
+}
+
+.experience {
+    flex-wrap: wrap;
+}
+
+.experience .experience-pic img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.experience .experience-info h5 {
+    margin: 10px 0 50px 0;
+}
+
+.experience .experience-card {
+    margin: 20px 0;
+    display: flex;
+}
+
+.experience .text-wrap .green {
+    color: #886D1E;
+}
+
+.experience .experience-card i {
+    margin-top: 6px;
+}
+
+.experience .text-wrap {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience .text-wrap h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.experience .text-wrap span {
+    margin-left: 6px;
+    color: #633;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.experience .text-wrap p {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.testimonial {
+    width: 100%;
+    padding: 120px 0;
+    background: url('img/quotes-bg.jpg') no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.testimonial .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #121212;
+    opacity: .7;
+}
+
+.testimonial .container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial h1 {
+    margin: 20px 0 40px 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 1.4;
+}
+
+.testimonial p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.contact .contact-form {
+    background: #e9724c;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #E3AE57;
+    outline: none;
+    transition: .6s ease-in-out;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-bottom: 1px solid #fff;
+}
+
+.contact input::placeholder, .contact textarea::placeholder {
+    padding-left: 20px;
+    color: #fff;
+}
+
+.contact .btn {
+    margin: 14px 0 0 0;
+    padding: 14px 140px;
+    background: #fff;
+    border: 2px solid #e9724c;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.contact .btn:hover {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+.contact .contact-card:nth-child(1) {
+    background: url('img/contact-img.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.contact .contact-card:nth-child(2) {
+    background: #161616;
+}
+
+.contact .contact-card h2, .contact .contact-card h1 {
+    color: #fff;
+    font-weight: 200;
+}
+
+.contact .contact-card h5 {
+    margin: 0;
+    color: #888;
+    font-weight: 300;
+}
+
+.contact .contact-card h1 {
+    margin: 30px 0 10px 0;
+}
+
+.contact .contact-card a, .contact .contact-card p:first-of-type, footer i {
+    color: #888;
+}
+
+.contact .contact-card p {
+    color: #E3AE57;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.contact .contact-card i {
+    margin-right: 10px;
+}
+
+footer {
+    width: 100%;
+    padding: 200px 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin: 0 0 50px 0;
+    color: #888;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+footer .lk {
+    color: #E3AE57;
+    text-decoration: none;
+}
+
+footer .circle {
+    margin: 0 14px;
+    padding: 8px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .6s ease-in-out;
+}
+
+footer .circle:hover {
+    background: #E3AE57;
+}
+
+footer .circle:hover i {
+    color: #fff;
+}
+
+@media(max-width: 700px) {
+    .desc {
+        flex-direction: column;
+        align-items: center;
+    }
+    .desc .desc-box {
+        max-width: 70%;
+        margin: 20px 0;
+    }
+}
+
+@media(min-width: 701px) and (max-width: 1200px) {
+    .desc {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .desc .desc-box {
+        max-width: 45%;
+        margin: 20px 0;
+    }
+}
+
+@media(max-width: 900px) {
+    #burger {
+        display: block;
+        color: #fff;
+        margin: 10px 0 0 0;
+    }
+    nav .container {
+        padding: 10px 0;
+        flex-direction: column;
+    }
+    nav .logo, nav .list.show {
+        display: none;
+    }
+    nav .list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .main, .about {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .main br {
+        display: none;
+    }
+    .main .main-left, .about .about-right, .experience .experience-pic, .experience .experience-info {
+        max-width: 100%;
+    }
+    .main .main-right, .about .about-left {
+        max-width: 90%;
+    }
+    .main .main-right .btn {
+        margin: 20px auto 0 auto;
+    }
+    .experience {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 1150px) {
+    nav .container, .testimonial .container {
+        max-width: 90%;
+    }
+    .contact {
+        flex-direction: column;
+    }
+    .contact .contact-form, .contact .contact-info {
+        max-width: 100%;
+    }
+    footer {
+        padding: 40px 0;
+    }
+    footer p {
+        margin: 10px 0;
+    }
+}
